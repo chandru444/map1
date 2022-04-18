@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&displa=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <title>Main Gate</title>
+    <style>
+        body{
+            overflow:hidden;
+        }
+        img{
+            /* position: absolute; */
+            width:10%;
+            /* height:100vh; */
+        }
+        .main{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            height:100vh;
+           
+                }
+        .logo{
+            grid-column: 1 / 3;
+            grid-row: 1;
+            height: 200px;
+            width:100%;
+        }
+      
+        .menu{
+            width:100%;
+            grid-column: 1 / 2;
+            grid-row: 2/3;
+            padding-top:40px;
+            overflow-y: scroll;
+            /* background-color: green; */
+            /* background-image: url('/static/images/0.png');
+            background-size:100%;
+            background-position: center; */
+
+
+        }
+        a{
+            margin-top:20px;
+            width:300px;
+        }
+        .output{
+            width:100%;
+            grid-column: 2/ 4;
+            grid-row: 2/3;
+        }
+        video{
+            margin-top:100px;
+            width:500px;
+            height:500px;
+        }
+        table{
+            margin-top:-280px;
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="main">
+        <!-- <div class="logo">
+            <img src="/static/1.jpeg" alt="">
+
+        </div> -->
+       
+        <div class="menu">  
+            <table class="table table-bordered table-dark">
+                <tbody>
+            <center>
+                <tr>
+                    <td>
+            <a class="btn btn-secondary" href="{{url_for('homepage')}}"  id="dropdownMenuButton"  aria-haspopup="true" aria-expanded="false">
+                Home Page
+            </a>
+        </td>
+    </tr>
+            <tr>
+                <td>
+            <a class="btn btn-secondary" href="{{url_for('ground_floor')}}"  id="dropdownMenuButton"  aria-haspopup="true" aria-expanded="false">
+               Ground Floor
+            </a>
+        </td>
+    </tr>
+            <tr>
+                <td>
+            <a class="btn btn-secondary" href="{{url_for('first_floor')}}"  id="dropdownMenuButton"  aria-haspopup="true" aria-expanded="false">
+                First Floor
+            </a>
+        </td>
+    </tr>
+            <tr>
+                <td>
+            <a class="btn btn-secondary" href="{{url_for('second_floor')}}"  id="dropdownMenuButton"  aria-haspopup="true" aria-expanded="false">
+               Second Floor
+            </a>
+        </td>
+    </tr>
+            <tr>
+                <td>
+            <a class="btn btn-secondary" href="{{url_for('third_floor')}}"  id="dropdownMenuButton"  aria-haspopup="true" aria-expanded="false">
+                Third Floor
+            </a>
+        </td>
+    </tr>
+            <tr>
+                <td>
+            <a class="btn btn-secondary" href="{{url_for('fourth_floor')}}"  id="dropdownMenuButton"  aria-haspopup="true" aria-expanded="false">
+                Fourth Floor
+            </a>
+        </td>
+    </tr>
+            <tr>
+                <td>
+            <a class="btn btn-secondary" href="{{url_for('fifth_floor')}}"  id="dropdownMenuButton"  aria-haspopup="true" aria-expanded="false">
+               Fifth Floor
+            </a>
+        </td>
+    </tr>
+            <tr>
+                <td>
+            <a class="btn btn-secondary" href="{{url_for('main_block1',id=1)}}"  id="dropdownMenuButton"  aria-haspopup="true" aria-expanded="false">
+                Administration block
+            </a>
+        </td>
+    </tr>
+            <br>
+            <tr>
+                <td>
+            <a class="btn btn-secondary" href="{{url_for('main_block1',id=2)}}"  id="dropdownMenuButton"  aria-haspopup="true" aria-expanded="false">
+                Civil block
+            </a>
+        </td>
+    </tr>
+            <br>
+            <tr>
+                <td>
+            <a class="btn btn-secondary" href="{{url_for('main_block1',id=3)}}"  id="dropdownMenuButton"  aria-haspopup="true" aria-expanded="false">
+                Electronics block 1
+            </a>
+        </td>
+    </tr>
+            <br>
+            <tr>
+                <td>
+            <a class="btn btn-secondary" href="{{url_for('main_block1',id=4)}}"  id="dropdownMenuButton"  aria-haspopup="true" aria-expanded="false">
+                Electronics block 2
+            </a>
+        </td>
+    </tr>
+            <br>
+            <tr>
+                <td>
+            <a class="btn btn-secondary" href="{{url_for('main_block1',id=5)}}"  id="dropdownMenuButton"  aria-haspopup="true" aria-expanded="false">
+                Ladies hostel
+            </a>
+        </td>
+    </tr>
+            <br>
+            <tr>
+                <td>
+            <a class="btn btn-secondary" href="{{url_for('main_block1',id=6)}}"  id="dropdownMenuButton"  aria-haspopup="true" aria-expanded="false">
+                Main gate
+            </a>
+        </td>
+    </tr>
+            <br>
+            <tr>
+                <td>
+            <a class="btn btn-secondary" href="{{url_for('main_block1',id=7)}}"  id="dropdownMenuButton"  aria-haspopup="true" aria-expanded="false">
+                Mechanical block
+            </a>
+        </td>
+    </tr>
+            <br>
+            <tr>
+                <td>
+            <a class="btn btn-secondary" href="{{url_for('main_block1',id=8)}}"  id="dropdownMenuButton"  aria-haspopup="true" aria-expanded="false">
+                SRM canteen
+            </a>
+        </td>
+    </tr>
+            <br>
+            <tr>
+                <td>
+            <a class="btn btn-secondary" href="{{url_for('main_block1',id=9)}}"  id="dropdownMenuButton"  aria-haspopup="true" aria-expanded="false">
+                TRP auditorium
+            </a>
+        </td>
+    </tr>
+            <br>
+
+    </tbody>
+
+    </table>
+        </div>
+        <div class="output">
+            {% if video %}
+             <div class="output">
+               
+                <video id ='myVideo' class="embed-responsive embed-responsive-16by9"  controls autoplay >
+                    <source class="embed-responsive-item" src="/static/Project/Main block/{{video}}" type="video/mp4"></source>
+                </video>
+               
+            </div>
+            {% endif %}
+
+        </div>
+         <!-- <div class="logo">
+            <center>
+            
+<h1>hi</h1>
+            </center>
+        </div> -->
+
+    </div>
+    
+</body>
+</html>
